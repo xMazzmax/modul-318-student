@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SwissTransport.Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace MaxiTransportApp
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void suchenButton_Click(object sender, EventArgs e)
+        {
+            var transport = new Transport();
+            Transport.GetConnections("", "").ConnectionList;
         }
     }
 }

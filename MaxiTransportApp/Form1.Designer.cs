@@ -31,7 +31,15 @@
             this.TabControl1 = new System.Windows.Forms.TabControl();
             this.verbindungssucheTabPage = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Departure = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartureStation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeparturePlatform = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Arrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArrivalStation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArrivalPlatform = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.suchenButton = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -41,23 +49,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.abfahrtstafelTabPage = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.Departure = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepartureStation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeparturePlatform = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Arrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArrivalStation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArrivalPlatform = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.TabControl1.SuspendLayout();
             this.verbindungssucheTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -116,6 +117,54 @@
             this.dataGridView1.Size = new System.Drawing.Size(774, 270);
             this.dataGridView1.TabIndex = 1;
             // 
+            // Departure
+            // 
+            this.Departure.HeaderText = "Abfahrt";
+            this.Departure.MinimumWidth = 6;
+            this.Departure.Name = "Departure";
+            this.Departure.ReadOnly = true;
+            // 
+            // DepartureStation
+            // 
+            this.DepartureStation.HeaderText = "Von";
+            this.DepartureStation.MinimumWidth = 6;
+            this.DepartureStation.Name = "DepartureStation";
+            this.DepartureStation.ReadOnly = true;
+            // 
+            // DeparturePlatform
+            // 
+            this.DeparturePlatform.HeaderText = "Gleis";
+            this.DeparturePlatform.MinimumWidth = 6;
+            this.DeparturePlatform.Name = "DeparturePlatform";
+            this.DeparturePlatform.ReadOnly = true;
+            // 
+            // Arrival
+            // 
+            this.Arrival.HeaderText = "Ankunft";
+            this.Arrival.MinimumWidth = 6;
+            this.Arrival.Name = "Arrival";
+            this.Arrival.ReadOnly = true;
+            // 
+            // ArrivalStation
+            // 
+            this.ArrivalStation.HeaderText = "Nach";
+            this.ArrivalStation.MinimumWidth = 6;
+            this.ArrivalStation.Name = "ArrivalStation";
+            this.ArrivalStation.ReadOnly = true;
+            // 
+            // ArrivalPlatform
+            // 
+            this.ArrivalPlatform.HeaderText = "Gleis";
+            this.ArrivalPlatform.MinimumWidth = 6;
+            this.ArrivalPlatform.Name = "ArrivalPlatform";
+            this.ArrivalPlatform.ReadOnly = true;
+            // 
+            // Duration
+            // 
+            this.Duration.HeaderText = "Dauer";
+            this.Duration.MinimumWidth = 6;
+            this.Duration.Name = "Duration";
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -125,6 +174,7 @@
             this.panel1.Controls.Add(this.suchenButton);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.vonTextBox);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
@@ -132,6 +182,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(774, 125);
             this.panel1.TabIndex = 0;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(421, 50);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.TabIndex = 4;
             // 
             // dateTimePicker1
             // 
@@ -148,6 +205,7 @@
             this.suchenButton.TabIndex = 1;
             this.suchenButton.Text = "Suchen";
             this.suchenButton.UseVisualStyleBackColor = true;
+            this.suchenButton.Click += new System.EventHandler(this.suchenButton_Click);
             // 
             // textBox2
             // 
@@ -223,6 +281,40 @@
             this.dataGridView2.Size = new System.Drawing.Size(774, 337);
             this.dataGridView2.TabIndex = 2;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Abfahrt";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Nach";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Ankunft";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Gleis";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Dauer";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -260,94 +352,14 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Von:";
             // 
-            // dateTimePicker2
+            // label5
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(421, 50);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 4;
-            // 
-            // Departure
-            // 
-            this.Departure.HeaderText = "Abfahrt";
-            this.Departure.MinimumWidth = 6;
-            this.Departure.Name = "Departure";
-            this.Departure.ReadOnly = true;
-            // 
-            // DepartureStation
-            // 
-            this.DepartureStation.HeaderText = "Von";
-            this.DepartureStation.MinimumWidth = 6;
-            this.DepartureStation.Name = "DepartureStation";
-            this.DepartureStation.ReadOnly = true;
-            // 
-            // DeparturePlatform
-            // 
-            this.DeparturePlatform.HeaderText = "Gleis";
-            this.DeparturePlatform.MinimumWidth = 6;
-            this.DeparturePlatform.Name = "DeparturePlatform";
-            this.DeparturePlatform.ReadOnly = true;
-            // 
-            // Arrival
-            // 
-            this.Arrival.HeaderText = "Ankunft";
-            this.Arrival.MinimumWidth = 6;
-            this.Arrival.Name = "Arrival";
-            this.Arrival.ReadOnly = true;
-            // 
-            // ArrivalStation
-            // 
-            this.ArrivalStation.HeaderText = "Nach";
-            this.ArrivalStation.MinimumWidth = 6;
-            this.ArrivalStation.Name = "ArrivalStation";
-            this.ArrivalStation.ReadOnly = true;
-            // 
-            // ArrivalPlatform
-            // 
-            this.ArrivalPlatform.HeaderText = "Gleis";
-            this.ArrivalPlatform.MinimumWidth = 6;
-            this.ArrivalPlatform.Name = "ArrivalPlatform";
-            this.ArrivalPlatform.ReadOnly = true;
-            // 
-            // Duration
-            // 
-            this.Duration.HeaderText = "Dauer";
-            this.Duration.MinimumWidth = 6;
-            this.Duration.Name = "Duration";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Abfahrt";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Nach";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Ankunft";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Gleis";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Dauer";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(369, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 17);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Zeit:";
             // 
             // Form1
             // 
@@ -402,6 +414,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.Label label5;
     }
 }
 
