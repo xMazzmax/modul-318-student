@@ -23,11 +23,11 @@ namespace SwissTransport.Models
     {
         [JsonProperty("station")] public Station Station { get; set; }
 
-        public DateTime? Arrival { get; set; }
+        public string Arrival { get; set; }
 
         public string ArrivalTimestamp { get; set; }
 
-        public DateTime? Departure { get; set; }
+        public string Departure { get; set; }
 
         public string DepartureTimestamp { get; set; }
 

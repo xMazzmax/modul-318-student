@@ -25,6 +25,11 @@
             return HttpClient.GetObject(uri, JsonConvert.DeserializeObject<Stations>);
         }
 
+        public Connection GetConnections(System.Windows.Forms.DataGridViewTextBoxColumn fromColumn, System.Windows.Forms.DataGridViewTextBoxColumn toColumn)
+        {
+            throw new NotImplementedException();
+        }
+
         public StationBoardRoot GetStationBoard(string station, string id)
         {
             if (string.IsNullOrEmpty(station))
