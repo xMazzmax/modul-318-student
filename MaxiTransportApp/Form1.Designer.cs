@@ -83,7 +83,7 @@
             this.TabControl1.Location = new System.Drawing.Point(0, 0);
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.SelectedIndex = 0;
-            this.TabControl1.Size = new System.Drawing.Size(842, 379);
+            this.TabControl1.Size = new System.Drawing.Size(846, 419);
             this.TabControl1.TabIndex = 6;
             // 
             // verbindungssucheTabPage
@@ -93,7 +93,7 @@
             this.verbindungssucheTabPage.Location = new System.Drawing.Point(4, 25);
             this.verbindungssucheTabPage.Name = "verbindungssucheTabPage";
             this.verbindungssucheTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.verbindungssucheTabPage.Size = new System.Drawing.Size(834, 350);
+            this.verbindungssucheTabPage.Size = new System.Drawing.Size(838, 390);
             this.verbindungssucheTabPage.TabIndex = 0;
             this.verbindungssucheTabPage.Text = "Verbindungssuche";
             this.verbindungssucheTabPage.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@
             this.connectionListView.HideSelection = false;
             this.connectionListView.Location = new System.Drawing.Point(6, 93);
             this.connectionListView.Name = "connectionListView";
-            this.connectionListView.Size = new System.Drawing.Size(822, 251);
+            this.connectionListView.Size = new System.Drawing.Size(826, 291);
             this.connectionListView.TabIndex = 5;
             this.connectionListView.UseCompatibleStateImageBehavior = false;
             this.connectionListView.View = System.Windows.Forms.View.Details;
@@ -130,7 +130,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Start";
-            this.columnHeader2.Width = 200;
+            this.columnHeader2.Width = 185;
             // 
             // columnHeader3
             // 
@@ -143,7 +143,7 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Ziel";
-            this.columnHeader5.Width = 200;
+            this.columnHeader5.Width = 185;
             // 
             // columnHeader6
             // 
@@ -164,7 +164,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(6, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(822, 81);
+            this.panel1.Size = new System.Drawing.Size(826, 81);
             this.panel1.TabIndex = 0;
             // 
             // toComboBox
@@ -261,7 +261,7 @@
             this.abfahrtstafelTabPage.Location = new System.Drawing.Point(4, 25);
             this.abfahrtstafelTabPage.Name = "abfahrtstafelTabPage";
             this.abfahrtstafelTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.abfahrtstafelTabPage.Size = new System.Drawing.Size(834, 350);
+            this.abfahrtstafelTabPage.Size = new System.Drawing.Size(838, 390);
             this.abfahrtstafelTabPage.TabIndex = 1;
             this.abfahrtstafelTabPage.Text = "Abfahrtstafel";
             this.abfahrtstafelTabPage.UseVisualStyleBackColor = true;
@@ -279,7 +279,7 @@
             this.stationBoardListView.HideSelection = false;
             this.stationBoardListView.Location = new System.Drawing.Point(6, 93);
             this.stationBoardListView.Name = "stationBoardListView";
-            this.stationBoardListView.Size = new System.Drawing.Size(822, 251);
+            this.stationBoardListView.Size = new System.Drawing.Size(826, 291);
             this.stationBoardListView.TabIndex = 8;
             this.stationBoardListView.UseCompatibleStateImageBehavior = false;
             this.stationBoardListView.View = System.Windows.Forms.View.Details;
@@ -311,7 +311,7 @@
             this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(6, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(822, 81);
+            this.panel2.Size = new System.Drawing.Size(826, 81);
             this.panel2.TabIndex = 7;
             // 
             // stationComboBox
@@ -360,7 +360,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 391);
+            this.ClientSize = new System.Drawing.Size(858, 431);
             this.Controls.Add(this.TabControl1);
             this.Name = "Form1";
             this.Text = "MaxiTransportApp";
