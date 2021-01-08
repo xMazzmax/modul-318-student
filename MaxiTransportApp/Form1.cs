@@ -15,26 +15,29 @@ namespace MaxiTransportApp
 {
     public partial class Form1 : Form
     {
-        // Membervariablen
+        // Member Variables
         //
         public Transport transport = new Transport();
         public Stations stations = new Stations();
+        public string departureDate;
+        public string departureTime;
 
-        // Inizialisiert die Form der MaxiTransportApp
+        // Initialization Form MaxiTransportApp
         //
         public Form1()
         {
             InitializeComponent();
         }
 
-        // Button Verbindungssuche
+        // Button Connection
         //
         private void SearchConnectionButton_Click(object sender, EventArgs e)
         {
             SearchConnection(connectionListView);
+            SetDepartureDateTime();
         }
 
-        // Methode Verbindungssuche
+        // Connection
         //
         private void SearchConnection(ListView connectionListView)
         {
@@ -46,7 +49,7 @@ namespace MaxiTransportApp
 
             foreach (var connection in connections.ConnectionList)
             {
-                DateTime departure = DateTime.Parse(connection.From.Departure);
+                DateTime departure = DateTime.Parse(departureTime);
                 DateTime arrival = DateTime.Parse(connection.To.Arrival);
 
                 var listViewItem = new ListViewItem();
@@ -64,11 +67,13 @@ namespace MaxiTransportApp
             }
         }
 
-        private void searchStationBoardButton_Click(object sender, EventArgs e)
+        // Button Station Board
+        //
+        private void SearchStationBoardButton_Click(object sender, EventArgs e)
         {
             SearchStationBoard(stationBoardListView);
         }
-        // Abfahrtstafel
+        // Station Board
         //
         private void SearchStationBoard(ListView stationBoardListView)
         {
@@ -107,6 +112,14 @@ namespace MaxiTransportApp
                     input.Items.Add(station.Name);
                 }
             }
+        }
+
+        // Departure Date Time Setting
+        //
+        private void SetDepartureDateTime()
+        {
+            departureTime = timeDateTimePicker.Value.Hour + ":" + timeDateTimePicker.Value.Minute;
+            departureTime = timeDateTimePicker.Value.Year + "." + timeDateTimePicker.Value.Month + "." + timeDateTimePicker.Value.Day;
         }
     }
 }

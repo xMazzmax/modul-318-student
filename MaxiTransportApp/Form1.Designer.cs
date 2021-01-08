@@ -333,7 +333,7 @@
             this.searchStationBoardButton.TabIndex = 5;
             this.searchStationBoardButton.Text = "Suchen";
             this.searchStationBoardButton.UseVisualStyleBackColor = true;
-            this.searchStationBoardButton.Click += new System.EventHandler(this.searchStationBoardButton_Click);
+            this.searchStationBoardButton.Click += new System.EventHandler(this.SearchStationBoardButton_Click);
             // 
             // label8
             // 
